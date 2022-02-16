@@ -1,0 +1,23 @@
+kind: HTTPRoute
+apiVersion: networking.x-k8s.io/v1alpha1
+metadata:
+  name: new-route
+  namespace: abhi
+  labels:
+    gateway: internal-https
+spec:
+  gateways:
+    allow: All
+  hostnames:
+  - "hostname2.searceinc.org"
+  rules:
+  - forwardTo:
+    - serviceName: sampleapp-svc
+      port: 80
+  - matches:
+    - path:
+        type: Prefix
+        value: /abhi  
+    forwardTo:
+    - serviceName: sampleapp-svc
+      port: 80
