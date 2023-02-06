@@ -6,7 +6,7 @@ metadata:
     gateway: internal-https
 spec:
   hostnames:
-  - "hostname1.searceinc.org"
+  - "hostname1.example.org"
   rules:
   - forwardTo:
     - serviceName: store-v1
