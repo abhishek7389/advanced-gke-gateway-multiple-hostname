@@ -9,7 +9,7 @@ spec:
   gateways:
     allow: All
   hostnames:
-  - "hostname2.searceinc.org"
+  - "hostname2.example.org"
   rules:
   - forwardTo:
     - serviceName: sampleapp-svc
